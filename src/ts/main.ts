@@ -1,5 +1,3 @@
-const { log } = console;
-
 document.addEventListener("DOMContentLoaded", () => {
   const mbEl: HTMLElement = document.querySelector(
     ".app__info span"

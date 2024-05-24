@@ -1,5 +1,4 @@
 "use strict";
-var log = console.log;
 document.addEventListener("DOMContentLoaded", function () {
   var mbEl = document.querySelector(".app__info span");
   var progressEl = document.querySelector(".app__progress");
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var interval = setInterval(function () {
     value += un;
     percent = parseInt(String((value * 100) / total));
-    // mbEl.textContent = value.toFixed(2).toString();
     mbEl.textContent = (value / 1024).toFixed(2);
     percentEl.textContent = percent.toString();
     if (value > 16384) {

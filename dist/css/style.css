@@ -1,11 +1,3 @@
-.highlighted {
-  color: red !important;
-}
-
-.uppercase {
-  text-transform: uppercase !important;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,12 +24,25 @@ html body {
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 1.25;
   letter-spacing: 0;
+  line-height: 1.25;
   min-height: 100svh;
   place-items: center;
 }
-html body .app__container {
+html body p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.highlighted {
+  color: red !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.app__container {
   align-items: center;
   background-color: #000;
   border: 1px solid red;
@@ -48,19 +53,21 @@ html body .app__container {
   padding: 0.7em;
   width: clamp(320px, 90%, 480px);
 }
-html body .app__container .app__top {
+
+.app__top {
   display: flex;
   gap: 0.5em;
 }
-html body .app__container .app__top h1 {
-  font-size: 1.5rem;
+
+.app__title {
   font-family: "Oswald Bold", sans-serif;
+  font-size: 1.5rem;
 }
-html body .app__container .app__top i {
+
+.app__icon {
+  animation: blick 0.5s linear alternate-reverse infinite;
   color: yellow;
   font-size: 1.5rem;
-  animation: blick 0.5s linear alternate-reverse infinite;
-  opacity: 1;
 }
 @keyframes blick {
   from {
@@ -70,25 +77,24 @@ html body .app__container .app__top i {
     opacity: 0;
   }
 }
-html body .app__container .app__description {
-  line-height: 1.5;
-  text-align: justify;
-}
-html body .app__container .app__progress-wrapper {
+
+.app__progress-wrapper {
+  align-items: center;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  align-self: stretch;
-  align-items: center;
 }
-html body .app__container .app__progress-wrapper .app__bar {
+
+.app__bar {
   background-color: #666;
   border-radius: 0.5em;
   height: 2em;
   position: relative;
   width: 100%;
 }
-html body .app__container .app__progress-wrapper .app__bar .app__progress {
+
+.app__progress {
   animation: progress 100s linear forwards;
   animation-play-state: paused;
   background-color: #8b0000;
@@ -101,7 +107,8 @@ html body .app__container .app__progress-wrapper .app__bar .app__progress {
     width: 100%;
   }
 }
-html body .app__container .app__progress-wrapper .app__bar .app__percent {
+
+.app__percent {
   left: 50%;
   position: absolute;
   top: 50%;
