@@ -6,8 +6,8 @@
   "scripts": {
     "watch-ts": "npx tsc --strict -w src/ts/main.ts --outDir dist/js/",
     "watch-sass": "sass -w src/scss/style.scss dist/css/style.css",
-    "min-ts": "uglifyjs dist/js/main.js -o dist/js/main.min.js",
-    "min-sass": "uglifycss dist/css/style.css > dist/css/style.min.css"
+    "min-js": "uglifyjs dist/js/main.js -o dist/js/main.min.js",
+    "min-css": "uglifycss dist/css/style.css > dist/css/style.min.css"
   },
   "keywords": [],
   "author": "",
