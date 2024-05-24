@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var mbEl = document.querySelector(".app__info span");
     var progressEl = document.querySelector(".app__progress");
     var percentEl = document.querySelector(".app__percent-value");
-    var sound = new Audio("/dist/sound/beep-02.wav");
+    var sound = new Audio("/dist/sound/alert.mp3");
     var total = 16384;
     var un = total / 100;
     var value = 0;

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const percentEl: HTMLElement = document.querySelector(
     ".app__percent-value"
   ) as HTMLSpanElement;
-  const sound = new Audio("/dist/sound/beep-02.wav");
+  const sound = new Audio("/dist/sound/alert.mp3");
   const total = 16384;
   const un: number = total / 100;
   let value: number = 0;
