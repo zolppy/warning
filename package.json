@@ -1,0 +1,24 @@
+{
+  "name": "warning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-ts": "npx tsc --strict -w src/ts/main.ts --outDir dist/js/",
+    "watch-sass": "sass -w src/scss/style.scss dist/css/style.css",
+    "min-ts": "uglifyjs dist/js/main.js -o dist/js/main.min.js",
+    "min-sass": "uglifycss dist/css/style.css > dist/css/style.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.2",
+    "tsc": "^2.0.4",
+    "uglify-js": "^3.17.4",
+    "uglifycss": "^0.0.29"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
