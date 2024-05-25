@@ -13,8 +13,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="dist/css/style.min.css" />
-    <script defer src="dist/js/main.min.js"></script>
+    <link rel="stylesheet prefetch" href="dist/css/style.min.css" />
+    <script rel="prefetch" src="dist/js/main.min.js" defer></script>
   </head>
   <body>
     <main class="app__container">
@@ -35,7 +35,10 @@
         </div>
         <div class="app__info"><span>0</span> GB / 16 GB</div>
       </div>
-      <audio src="dist/sound/alert.mp3" loop autoplay></audio>
+      <audio loop autoplay>
+        <source src="dist/sound/alert.mp3" type="audio/mpeg" />
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
     </main>
   </body>
 </html>
