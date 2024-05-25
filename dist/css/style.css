@@ -6,11 +6,13 @@
 
 @font-face {
   font-family: "Oswald Regular";
-  src: url("/dist/font/oswald/oswald-regular.ttf");
+  src: local("dist/font/oswald/oswald-regular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Oswald Bold";
-  src: url("/dist/font/oswald/oswald-bold.ttf");
+  src: local("dist/font/oswald/oswald-bold.ttf") format("truetype");
+  font-display: swap;
 }
 html {
   font-size: 16px;
