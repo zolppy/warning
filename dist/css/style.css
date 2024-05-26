@@ -57,6 +57,7 @@ html body p {
 }
 
 .app__top {
+  align-items: center;
   display: flex;
   gap: 0.5em;
 }
@@ -68,8 +69,8 @@ html body p {
 
 .app__icon {
   animation: blick 0.5s linear alternate-reverse infinite;
-  color: yellow;
-  font-size: 1.5rem;
+  height: 24px;
+  width: 24px;
 }
 @keyframes blick {
   from {
