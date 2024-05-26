@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch-ts": "npx tsc --strict -w src/ts/main.ts --outDir dist/js/",
-    "watch-sass": "sass -w src/scss/style.scss dist/css/style.css",
-    "min-js": "uglifyjs dist/js/main.js -o dist/js/main.min.js",
-    "min-css": "uglifycss dist/css/style.css > dist/css/style.min.css"
+    "w-ts": "npx tsc --strict -w src/ts/main.ts --outDir dist/js/",
+    "w-sass": "npx sass -w src/sass/style.scss dist/css/style.css",
+    "min-js": "npx uglifyjs dist/js/main.js -o dist/js/main.min.js",
+    "min-css": "npx uglifycss dist/css/style.css > dist/css/style.min.css",
+    "min-all": "npm run min-js; npm run min-css",
+    "t-ts": "npx tsc --strict src/ts/main.ts --outDir dist/js/",
+    "t-sass": "npx sass src/sass/style.scss dist/css/style.css",
+    "tam-script": "npm run t-ts; npm run min-js",
+    "tam-style": "npm run t-sass; npm run min-css"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +20,8 @@
   "devDependencies": {
     "sass": "^1.77.2",
     "tsc": "^2.0.4",
+    "typescript": "^5.4.5",
     "uglify-js": "^3.17.4",
     "uglifycss": "^0.0.29"
-  },
-  "dependencies": {
-    "typescript": "^5.4.5"
   }
 }
