@@ -1,0 +1,14 @@
+.app__icon {
+  animation: blick 0.5s linear alternate-reverse infinite;
+  height: 24px;
+  width: 24px;
+
+  @keyframes blick {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

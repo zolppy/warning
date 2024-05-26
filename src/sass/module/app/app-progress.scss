@@ -1,0 +1,14 @@
+.app__progress {
+  animation: progress 100s linear forwards;
+  animation-play-state: paused;
+  background-color: #8b0000;
+  border-radius: 0.5em;
+  height: 100%;
+  width: 0;
+
+  @keyframes progress {
+    to {
+      width: 100%;
+    }
+  }
+}

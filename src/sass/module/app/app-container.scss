@@ -1,0 +1,11 @@
+.app__container {
+  align-items: center;
+  background-color: #000;
+  border: 1px solid red;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0.7em;
+  width: clamp(320px, 90%, 480px);
+}
