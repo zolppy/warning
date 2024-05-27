@@ -1,7 +1,7 @@
 .app__progress {
   animation: progress 100s linear forwards;
   animation-play-state: paused;
-  background-color: #f00;
+  background-image: linear-gradient(to right, #f00, #a32424);
   border-radius: 0.5em;
   height: 100%;
   width: 0;
