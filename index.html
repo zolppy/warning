@@ -12,32 +12,48 @@
     <link rel="stylesheet" href="dist/css/style.min.css" />
     <script src="dist/js/script.min.js" defer></script>
   </head>
-
   <body>
     <main class="app__container">
       <div class="app__top">
         <h1 class="app__title uppercase">Atenção</h1>
-        <img src="dist/img/danger.png" class="app__icon" alt="" />
+        <img
+          src="dist/img/danger.png"
+          class="app__icon"
+          alt="ícone triângulo amarelo, com um ponto de interrogação preto no meio"
+          title="Aviso"
+        />
       </div>
       <p class="app__description">
         Seu computador foi hackeado, não clique em links alheios sem o
         conhecimento da fonte. Seus dados estão sendo copiados,
         <span class="highlighted">não adianta fechar a página</span>, pois há um
-        script executando em segundo plano.
+        <span lang="en">script</span> executando em segundo plano.
       </p>
-      <div
-        style="
-          align-self: stretch;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          gap: 0.5em;
-        "
-      >
-        <img style="width: 52px" src="dist/img/hacker.png" alt="" />
-        <img style="width: 52px" src="dist/img/pc.png" alt="" />
-        <img style="width: 52px" src="dist/img/download.png" alt="" />
-        <img style="width: 52px" src="dist/img/pendrive.png" alt="" />
+      <div class="app__icon-wrapper">
+        <img
+          class="app__larger-icon"
+          src="dist/img/hacker.png"
+          alt="ícone de hacker com capuz, de frente a um laptop"
+          title="Hacker em um laptop"
+        />
+        <img
+          class="app__larger-icon"
+          src="dist/img/pc.png"
+          alt="ícone de computador com uma janela aberta, nela, há uma ilustração de caveira"
+          title="Computador com janela aberta"
+        />
+        <img
+          class="app__larger-icon"
+          src="dist/img/download.png"
+          alt="ícone de download"
+          title="Download"
+        />
+        <img
+          class="app__larger-icon"
+          src="dist/img/pendrive.png"
+          alt="ícone de um pen drive com uma imagem de caveira, estampada"
+          title="Pen drive"
+        />
       </div>
       <div class="app__progress-wrapper">
         <div class="app__bar">
@@ -47,6 +63,7 @@
         <div class="app__info"><span>0</span> GB / 16 GB</div>
       </div>
       <audio loop autoplay>
+        <!-- Adicionar formatos mais leves, do mais leve ao mais pesado até mp3, em cascata -->
         <source src="dist/sound/alert.mp3" type="audio/mpeg" />
         Seu navegador não suporta o elemento de áudio.
       </audio>
