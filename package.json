@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "w-ts": "npx tsc --strict -w src/ts/main.ts --outDir dist/js/",
+    "w-ts": "npx tsc --strict -w src/ts/script.ts --outDir dist/js/",
     "w-sass": "npx sass -w src/sass/style.scss dist/css/style.css",
-    "min-js": "npx uglifyjs dist/js/main.js -o dist/js/main.min.js",
+    "min-js": "npx uglifyjs dist/js/script.js -o dist/js/script.min.js",
     "min-css": "npx uglifycss dist/css/style.css > dist/css/style.min.css",
     "min-all": "npm run min-js; npm run min-css",
-    "t-ts": "npx tsc --strict src/ts/main.ts --outDir dist/js/",
+    "t-ts": "npx tsc --strict src/ts/script.ts --outDir dist/js/",
     "t-sass": "npx sass src/sass/style.scss dist/css/style.css",
     "tam-script": "npm run t-ts; npm run min-js",
     "tam-style": "npm run t-sass; npm run min-css"
@@ -19,7 +19,6 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.77.2",
-    "tsc": "^2.0.4",
     "typescript": "^5.4.5",
     "uglify-js": "^3.17.4",
     "uglifycss": "^0.0.29"
