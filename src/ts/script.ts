@@ -3,6 +3,7 @@ const button = document.querySelector(".app__btn") as HTMLButtonElement;
 const alertSound: HTMLAudioElement = new Audio("./dist/sound/alert.mp3");
 
 alertSound.loop = true;
+alertSound.autoplay = true;
 
 document.addEventListener("DOMContentLoaded", () => {
   const mbEl: HTMLElement = document.querySelector(

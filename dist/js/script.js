@@ -2,6 +2,7 @@
 var button = document.querySelector(".app__btn");
 var alertSound = new Audio("./dist/sound/alert.mp3");
 alertSound.loop = true;
+alertSound.autoplay = true;
 document.addEventListener("DOMContentLoaded", function () {
     var mbEl = document.querySelector(".app__info span");
     var progressEl = document.querySelector(".app__progress");
@@ -25,5 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 button.addEventListener("click", function () {
     alertSound.play();
-    console.log("meu piru");
 });
