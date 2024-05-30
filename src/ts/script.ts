@@ -1,3 +1,5 @@
+const button = document.querySelector(".app__btn") as HTMLButtonElement;
+
 const alertSound: HTMLAudioElement = new Audio("./dist/sound/alert.mp3");
 
 alertSound.loop = true;
@@ -17,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let value: number = 0;
   let percent: number = 0;
 
-  alertSound.play();
+  button.click();
 
   mbEl.textContent = value.toFixed(2).toString();
   progressEl.style.animationPlayState = "running";
@@ -32,4 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(interval);
     }
   }, 1000);
+});
+
+button.addEventListener("click", () => {
+  alertSound.play();
 });

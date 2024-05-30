@@ -1,4 +1,5 @@
 "use strict";
+var button = document.querySelector(".app__btn");
 var alertSound = new Audio("./dist/sound/alert.mp3");
 alertSound.loop = true;
 document.addEventListener("DOMContentLoaded", function () {
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var un = total / 100;
     var value = 0;
     var percent = 0;
-    alertSound.play();
+    button.click();
     mbEl.textContent = value.toFixed(2).toString();
     progressEl.style.animationPlayState = "running";
     var interval = setInterval(function () {
@@ -21,4 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(interval);
         }
     }, 1000);
+});
+button.addEventListener("click", function () {
+    alertSound.play();
+    console.log("meu piru");
 });
