@@ -1,4 +1,6 @@
 "use strict";
+var alertSound = new Audio("./dist/sound/alert.mp3");
+alertSound.loop = true;
 document.addEventListener("DOMContentLoaded", function () {
     var mbEl = document.querySelector(".app__info span");
     var progressEl = document.querySelector(".app__progress");
@@ -7,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var un = total / 100;
     var value = 0;
     var percent = 0;
+    alertSound.play();
     mbEl.textContent = value.toFixed(2).toString();
     progressEl.style.animationPlayState = "running";
     var interval = setInterval(function () {
