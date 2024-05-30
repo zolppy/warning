@@ -1,3 +1,7 @@
+const alertSound: HTMLAudioElement = new Audio("./dist/sound/alert.mp3");
+
+alertSound.loop = true;
+
 document.addEventListener("DOMContentLoaded", () => {
   const mbEl: HTMLElement = document.querySelector(
     ".app__info span"
@@ -12,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const un: number = total / 100;
   let value: number = 0;
   let percent: number = 0;
+
+  alertSound.play();
 
   mbEl.textContent = value.toFixed(2).toString();
   progressEl.style.animationPlayState = "running";
